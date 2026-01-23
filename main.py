@@ -12,4 +12,3 @@ my_function()
 print(a)
 print(b)
 
-
