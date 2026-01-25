@@ -16,12 +16,28 @@ for student in hogwart_students:
 
 
 #building a block of hashes
+# def main():
+#     print_column(5)
+#     print_row(5)
+
+
+# def print_column(n):
+#     for _ in range(n):
+#         print("#")
+
+# def print_row(i):
+#     print("#" * i)
+
+# main()   
+
+#building a square with a function and a for loop
 def main():
-    print_column(5)
+    print_square(5)
+
+def print_square(num):
+    for _ in range(num):
+        print("#" * 5)
 
 
-def print_column(n):
-    for _ in range(n):
-        print("#")
 
-main()   
+main()
