@@ -1,0 +1,1 @@
+# List comprehension enables you to create a new listg of values using a comprehension or basically a for loop inside a list
