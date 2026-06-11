@@ -41,13 +41,21 @@ print(nums)
 
 # Getting the Index of a specific item in the list
 names = ['Cosmo', 'Pedro', 'Anu', 'Ray']
-# '''Traditional Approach'''
-# for index, item in enumerate(names):
-#     if item == 'Anu':
-#         print('Index: '+ str(index))
+'''Traditional Approach'''
+for index, item in enumerate(names):
+    if item == 'Anu':
+        print('Index: '+ str(index))
 
 
 '''List Comprehension Approach'''
 x = [(index) for index, item in enumerate(names) if item == 'Cosmo']
 print(f'Index: {x[0]}')
 
+# Using If Else in List Comprehension..
+
+words = 'The lord 1s  M1racle G0d'
+alpha = []
+numeric = [item if item.isnumeric() else alpha.append(item) for item in words]
+
+
+print(numeric)
