@@ -10,6 +10,6 @@ emails = [
 
 for email in emails:
     if ';' in email:
-        print('SQL Injection Attack Detected')
+        print(f'SQL Injection Attack Detected from {email}')
         break
     print(f"Processing Email: {email}")

@@ -1,10 +1,9 @@
-# Check  for even number
+# Check  for the first even number
 
-items = [1,  3,  4, 7]
+items = [1,  3,  4, 7, 8]
 
 for i in items:
     if i %  2 == 0:
-        print("Even Nr  found: ", i)
+        print("First Even Number found: ", i)
         break
-else:
-    print('All numbers are odd')
+

@@ -2,19 +2,19 @@
 
 names = ['john', 'maria', ' ', 'kumar']
 
-# for name in names:
-#     if name == ' ':
-#         print('Empty vaue detected')
-#         break
-#     print(f'name = {name}')
+for name in names:
+    if name == ' ':
+        print('Empty value detected')
+        break
+    print(f'name = {name}')
 
 
-#the continue statement is used to skip  one loop circle
+# the continue statement is used to skip  one loop circle
 # we can use continue to skip  bad or empty data without stopping the whole  loop
 
 for name in names:
     if name == ' ':
-        print('Empty vaue detected')
+        print('Empty value detected')
         continue
     print(f'name = {name}')
 

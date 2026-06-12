@@ -1,10 +1,10 @@
-# x = set()
-# print(type(x))
-# x.add(4)
-# print(x)
-# print(5 in x)
-# x.clear()
-# print(x)
+x = set()
+print(type(x))
+x.add(4)
+print(x)
+print(5 in x)
+x.clear()
+print(x)
 
 s1 = {2, 1, 3}
 s2 = {3, 8, 9 }

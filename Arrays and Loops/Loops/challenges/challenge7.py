@@ -3,7 +3,7 @@
 
 correct_password = "1234"
 
-for attempt in range(3):
+for _ in range(3):
     password = input('Input the password: ')
 
     if password == correct_password:
