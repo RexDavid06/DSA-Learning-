@@ -59,3 +59,20 @@ numeric = [item if item.isnumeric() else alpha.append(item) for item in words]
 
 
 print(numeric)
+
+# Nested loop iteration for 2D list
+a = [[1,2], [3,4]]
+
+''' Traditional Approach'''
+new_list = []
+
+'''iterating over the lists in a and storing it in i '''
+for i in a:
+    ''' iterating over the stored list in i to get individaul elements inside of i'''
+    for item in i:
+        new_list.append(item)
+print(new_list)
+
+'''List Comprehension Approach'''
+new_list = [item for i in a for item in i] # I feel fucking Amazed right now!!
+print(new_list)       
