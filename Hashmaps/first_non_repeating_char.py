@@ -5,7 +5,7 @@
 # print(counts.get('b', 'b is not a key'))
 
 # if 1 in counts.values():
-#     print('a exists in the dict')
+#     print('it exists in the dict')
 # else:
 #     print('it does not exists')
 

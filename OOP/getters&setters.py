@@ -20,3 +20,26 @@ user1 = User('moon', 'moon@gmail.com', 'password123')
 user1.set_email('newemail@gmail.com')
 print(user1.get_email())
 
+
+# 2. Using the @property decorator
+
+class Dog:
+    def __init__(self, breed, name, color):
+        self.breed = breed
+        self.name = name
+        self.__color = color
+
+    @property
+    def color(self):
+        return self.__color
+    
+    @color.setter
+    def color(self, new_color):
+        self.__color = new_color
+
+
+
+dog1 = Dog('german sheperd', 'Whisky', 'black')
+dog1.color = 'rED'
+print(dog1.color)
+
