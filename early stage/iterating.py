@@ -5,5 +5,5 @@ for item in x:
 
 y = [6, 1, 8]
 for index, item in enumerate(y):
-    print(index,    item)
+    print(index, item)
 
