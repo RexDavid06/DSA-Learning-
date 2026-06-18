@@ -36,3 +36,35 @@ print(User.is_strong_password("Python123"))
 Expected understanding:
 
 Real-world validation using static methods.'''
+
+class User:
+    def __init__(self, username, email, password):
+        self.username = username
+        self.email = email
+        self.password = password
+
+    @staticmethod
+    def is_valid_email(email):
+        if '@' in email and '.' in email:
+            return f'{email} is a valid email!'
+        else:
+            return f"{email} isn't a valid email, and can't be used!"
+
+    @staticmethod
+    def is_strong_password(password):
+        if len(password) >= 8:
+            for char in password:
+                if char.isdigit():
+                    for char in password:
+                        if char.isupper():
+                            return f'{password} is a strong password!'
+        return f"{password} isn't a strong password, and can't be used!"
+                        
+    
+            
+
+#INCOMPLETE YET!!
+
+user1 = User('rex', 'rex@gmail.com', '3456yhbesfg')
+print(User.is_valid_email(user1.email))
+print(User.is_strong_password(user1.password))

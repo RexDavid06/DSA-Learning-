@@ -28,3 +28,16 @@ True
 Expected understanding:
 
 Static methods performing checks.'''
+
+class PasswordValidator:
+
+    @staticmethod
+    def is_valid(password):
+        if len(password) >= 8:
+            for char in password:
+                if char.isdigit():
+                    return True
+        return False
+    
+        
+print(PasswordValidator.is_valid('newpassword5'))

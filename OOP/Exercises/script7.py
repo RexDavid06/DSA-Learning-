@@ -27,3 +27,20 @@ print(BankAccount.calculate_transfer_fee(20000))
 Expected understanding:
 
 Using static methods for business rules.'''
+
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+
+    @staticmethod
+    def calculate_transfer_fee(amount):
+        if amount < 5000:
+            return f'Transfer fee is #10'
+        elif 5000 >= amount < 50000:
+            return f'Transfer fee is #25'
+        else:
+            return f'Transfer fee is #50'
+
+account1 = BankAccount('Angel', 9000)
+print(account1.calculate_transfer_fee(4999))
