@@ -19,3 +19,18 @@ print(TemperatureConverter.celsius_to_fahrenheit(30))
 Expected understanding:
 
 Static methods used as utility functions.'''
+
+class TemperatureConverter:
+
+    @staticmethod
+    def celsius_to_fahrenheit(c):
+        f = (c * 9/5) + 32
+        return f'{f} F'
+    
+    def fahrenheit_to_celcius(f):
+        c = (f - 32) * 5/9
+        return f'{c} C'
+
+
+print(TemperatureConverter.celsius_to_fahrenheit(30))
+print(TemperatureConverter.fahrenheit_to_celcius(86))
