@@ -63,7 +63,7 @@ class User:
     
             
 
-#INCOMPLETE YET!!
+
 
 user1 = User('rex', 'rex@gmail.com', '3456yhbesfg')
 print(User.is_valid_email(user1.email))
