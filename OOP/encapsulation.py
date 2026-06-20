@@ -16,7 +16,7 @@ class BankAccount:
     
     def deposit(self, amount):
         if amount <= 0:
-            return ValueError('Amount should greater than 0')
+            return ValueError('Amount should be greater than 0')
         self.__balance += amount
         return self.__balance
         
