@@ -24,6 +24,7 @@ class BankAccount:
             return False
 
 account1 = BankAccount('Alice', 500)
+print(type(account1).__name__)
 
 account1.deposit(200)
 print(BankAccount.is_valid_interest_rate(3))
