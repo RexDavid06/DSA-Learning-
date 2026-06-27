@@ -1,6 +1,8 @@
 # Polymorphism
-# The word 'PolyMorphism' is derived from two greek words 'Poly' meaning many and 'Morp' meaning forms
-# So Polymorphism is the ability for an object to take many forms.
+# Polymorphism in Python refers to the ability of different object types to respond to the same function name,
+# method name, or operator in their own unique way. Derived from Greek meaning "many forms", it allows 
+# developers to use one unified interface to control multiple unique implementations, eliminating repetitive 
+# conditional logic (like if-elif type checks) and making code highly scalable.
 
 class Vehicle:
     def __init__(self, brand, model, year):
