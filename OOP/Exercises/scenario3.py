@@ -11,7 +11,7 @@ Exercise
 Could you model the relationships between these classes?
 
 '''
-import random
+
 import uuid
 class Exercise:
     def __init__(self, name, muscle_group):
