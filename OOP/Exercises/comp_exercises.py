@@ -21,6 +21,7 @@ If you get all five right, you've understood the core idea behind composition.
 # 1 House - Room relationship
 # the HOUSE-ROOM relationship is a "has-a" relationship. The house HAS-A room, so we're using composition
 
+import uuid
 class Room:
         def open_door(self):
            print('Opening Door.......')
@@ -119,11 +120,34 @@ print(lappy.__dict__)
 
 
 # 4. Employee - Manager
-
-class Manager:
-     pass
+# The Employee and Manager relationship is s 'IS-A' relationship because a manager is alos an employee, but specialized employee
 
 class Employee:
-     def __init__(self, name):
+     def __init__(self, name, role, department):
           self.name = name 
-          self.manager = Manager()
+          self.role = role
+          self.department = department
+          self.employee_id = uuid.uuid4()
+
+     def annual_salary(self, salary):
+          result = salary * 12
+          return result
+     
+     def show_employee_id(self):
+          return f"{self.name}'s employer ID: {self.employee_id}"
+
+
+
+class Manager(Employee):
+     def __init__(self, name, role, department, department_managing):
+          super().__init__(name, role, department)
+          self.department_managing = department_managing
+
+
+
+
+emp = Employee('Jide', 'Customer Service', 'Marketing')
+manager1 = Manager('Blessing', 'manager', 'Frontend Lead', 'Frontend Team')
+
+print(manager1.annual_salary(30000))
+print(manager1.show_employee_id())
