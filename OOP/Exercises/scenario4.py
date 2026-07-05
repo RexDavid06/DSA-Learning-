@@ -31,3 +31,26 @@ Account should not perform transfers directly.
 This introduces composition, which is even more common than inheritance in real backend systems.
 
 '''
+class Bank:
+    pass
+
+class Customer:
+    pass
+
+class SavingsAccount:
+    pass
+
+class CurrentAccount:
+    pass
+
+class Transaction:
+    pass
+
+class TransferService:
+    pass
+
+class TransferValidator:
+    pass
+
+class TransferHstory:
+    pass
