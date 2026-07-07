@@ -8,9 +8,12 @@ Build this.
 Bank
 │
 ├── Customer
-│      │
-│      ├── SavingsAccount
-│      └── CurrentAccount
+|       |
+|       |__Account
+|             |
+│             │
+│             ├── SavingsAccount
+│             └── CurrentAccount
 │
 ├── Transaction
 │
@@ -69,17 +72,52 @@ class Account:
         account_number = random.randint(1000000000, 9999999999)
         self.account_number = account_number
         self._balance = 0.0
+        self.transactions = []
 
     @property
     def balance(self):
         return self._balance
 
-class SavingsAccount:
-    pass
-        
+    def deposit(self, amount):
+        if amount < 100:
+            return f"Amount should be more than 100."
+        else:
+            self._balance += amount
 
-class CurrentAccount:
-    pass
+    
+    def withdraw(self, amount):
+        if amount < 100:
+            return f"Amount should be more than 100."
+        if self._balance < amount:
+            return f"You have insufficient funds for this transaction."
+        else:
+            self._balance -= amount
+
+    def add_transactions(self, transaction):
+        self.transactions.append(transaction)
+    
+    def view_transactions(self):
+        return self.transactions
+
+
+
+class SavingsAccount(Account):
+    MIN_BALANCE = 500
+    def __init__(self, name):
+        self.name = name  
+
+    def withdraw(self, amount):
+        if self._balance <= self.MIN_BALANCE:
+            return f"500 should be the minImum amount left in the account."
+        if self._balance < amount:
+            return f"You have insufficient funds for this transaction." 
+        else:
+            self._balance -= amount    
+
+class CurrentAccount(Account):
+    def __init__(self, name):
+        self.name = name
+
 
 class Transaction:
     pass
