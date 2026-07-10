@@ -1,14 +1,8 @@
-a = 5
-b = 10
+from MyLib.Package1 import module1
+from MyLib.Package2.module3 import function6
+from MyLib.Package1.module1 import function2
+import some_module
 
-def my_function():
-    global a 
-    """"the keyword global  refers to the global variable a... i.e  
-    if any change is made to the variable a, it should affect 
-    the global variable a """
-    a = 6; b = 15
+print(module1.function1())
 
-my_function()
-print(a)
-print(b)
-
+print(function6())
