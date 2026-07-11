@@ -1,0 +1,228 @@
+Part 1: join() Exercises
+Exercise 1 (Easy)
+
+Given:
+
+fruits = ["Apple", "Banana", "Orange", "Mango"]
+
+Print:
+
+Apple, Banana, Orange, Mango
+Exercise 2
+
+Given:
+
+letters = ['P', 'Y', 'T', 'H', 'O', 'N']
+
+Print:
+
+PYTHON
+Exercise 3
+
+Given:
+
+words = ["Backend", "Developer", "Journey"]
+
+Print:
+
+Backend -> Developer -> Journey
+Exercise 4 (Challenge)
+
+Input:
+
+sentence = "Python is awesome"
+
+Output:
+
+Python-is-awesome
+
+(Hint: You'll need both split() and join().)
+
+Part 2: Reading Files
+
+Create a file named:
+
+students.txt
+
+Content:
+
+John
+Mary
+David
+Sarah
+James
+Exercise 5
+
+Read the file and print every student's name.
+
+Exercise 6
+
+Print the total number of students.
+
+Expected:
+
+Total students: 5
+Exercise 7
+
+Print only names that start with "J".
+
+Expected:
+
+John
+James
+Exercise 8 (Challenge)
+
+Print the names alphabetically.
+
+Part 3: Writing Files
+Exercise 9
+
+Create a file called
+
+shopping.txt
+
+Write:
+
+Rice
+Beans
+Milk
+Bread
+Exercise 10
+
+Ask the user:
+
+Enter another item:
+
+Append it to the file.
+
+(Hint: Use append mode.)
+
+Exercise 11
+
+Read the file again and display everything.
+
+Part 4: if __name__ == "__main__"
+
+Create two files.
+
+calculator.py
+def add(a, b):
+    ...
+
+def subtract(a, b):
+    ...
+
+if __name__ == "__main__":
+    print(add(5, 7))
+main.py
+
+Import the calculator.
+
+Call
+
+add(100, 200)
+
+Question:
+
+Why didn't print(add(5,7)) execute?
+
+Understanding that is the whole point of if __name__ == "__main__".
+
+Part 5: Combine OOP + Files
+Exercise 12
+
+Create a
+
+class Student
+
+Attributes:
+
+name
+age
+course
+
+Method:
+
+save()
+
+Save the student's details into
+
+students.txt
+Exercise 13
+
+Create three Student objects.
+
+Save them all to the same file.
+
+Expected file:
+
+John,20,Computer Science
+Mary,19,Mechanical Engineering
+David,22,Civil Engineering
+Exercise 14
+
+Read the file.
+
+Convert every line back into information and print:
+
+Name: John
+Age: 20
+Course: Computer Science
+Part 6: Mini Project
+Student Management System
+
+Requirements:
+
+Menu:
+
+1. Add Student
+2. View Students
+3. Search Student
+4. Delete Student
+5. Exit
+
+Use:
+
+OOP
+Read files
+Write files
+join()
+split()
+if __name__ == "__main__"
+
+Bonus:
+
+Store data like
+
+John|20|Computer Science
+Mary|19|Accounting
+David|22|Physics
+Part 7: Challenge (My Favorite)
+
+Build a Personal Diary.
+
+Menu:
+
+1. Write Entry
+2. View Entries
+3. Search by Word
+4. Count Entries
+5. Exit
+
+Example:
+
+Today I learned composition.
+Today I learned file handling.
+Today I learned join().
+
+Use everything you've learned:
+
+Classes
+Methods
+Lists
+Loops
+Reading files
+Writing files
+join()
+split()
+if __name__ == "__main__"

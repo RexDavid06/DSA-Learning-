@@ -25,3 +25,5 @@ def get_first_non_repeating_char(s: str):
        
 
 print(get_first_non_repeating_char(s))
+
+# I HONESTLY STILL DON'T UNDERSTAND THIS CODE!!

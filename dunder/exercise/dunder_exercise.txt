@@ -1,0 +1,29 @@
+'''
+Part 4: if __name__ == "__main__"
+
+Create two files.
+
+calculator.py
+def add(a, b):
+    ...
+
+def subtract(a, b):
+    ...
+
+if __name__ == "__main__":
+    print(add(5, 7))
+main.py
+
+Import the calculator.
+
+Call
+
+add(100, 200)
+
+Question:
+
+Why didn't print(add(5,7)) execute?
+
+Understanding that is the whole point of if __name__ == "__main__".
+
+'''
