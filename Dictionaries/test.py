@@ -9,7 +9,7 @@ y = dict(name='jude', age=20, nationality='nigerian')
 z = dict([('name', 'mark'), ('age', 40), ('nationality', 'polish')])
 
 # print(type(x))
-# #adds or modifies a key-value pair in thje dict
+# #adds or modifies a key-value pair in the dict
 # x['nationality'] = 'spanish'
 # x['NIN'] = 567489304
 # del(x['NIN'])

@@ -17,12 +17,12 @@ work differently depending on the product type?
 class Product:
     total_number_of_products = 0
 
-    def __init__(self, name, price):
+    def __init__(self, name: str, price:int|float):
         self.name = name
         self.price = price
         Product.total_number_of_products += 1
     
-    def calculate_shipping(self):
+    def calculate_shipping(self) -> str:
         'if the product price is less than 50,000, then the shpping fee will be 10% of the product price(Not real world Logic)'
         if self.price < 50000:
             shipping_fee = 10/100 * self.price

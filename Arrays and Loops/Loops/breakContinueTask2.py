@@ -1,4 +1,4 @@
-# scan through a  list of  emails to block unsafe  data from entering your system
+# scan through a list of emails to block unsafe data from entering your system
 
 
 emails = [

@@ -37,7 +37,7 @@ class Room:
 
 
 class House:
-        def __init__(self, number_of_rooms):
+        def __init__(self, number_of_rooms: int):
             self.number_of_rooms = number_of_rooms
             self.room = Room()
     
@@ -57,7 +57,7 @@ house1.domestic_maintenance()
 # the Bird and Eagle relationship is a "IS-A" relationship, the Eagle 'is a' Bird, so we're be using Inheritance
 
 class Bird:
-   def __init__(self, name):
+   def __init__(self, name: str):
         self.name = name
 
    def flying(self):
@@ -68,7 +68,7 @@ class Bird:
 
 
 class Eagle(Bird):
-   def __init__(self, name, specie, color):
+   def __init__(self, name: str, specie: str, color: str):
           'we are calling the parent class constructor with the super method'
           super().__init__(name)
           self.specie = specie
@@ -109,7 +109,7 @@ class Battery:
 
 
 class Laptop:
-     def __init__(self, brand, color):
+     def __init__(self, brand: str, color: str):
           self.brand = brand
           self.color = color
           self.battery = Battery()
@@ -123,13 +123,13 @@ print(lappy.__dict__)
 # The Employee and Manager relationship is s 'IS-A' relationship because a manager is alos an employee, but specialized employee
 
 class Employee:
-     def __init__(self, name, role, department):
+     def __init__(self, name: str, role: str, department: str):
           self.name = name 
           self.role = role
           self.department = department
           self.employee_id = uuid.uuid4()
 
-     def annual_salary(self, salary):
+     def annual_salary(self, salary: int|float) -> int|float:
           result = salary * 12
           return result
      
@@ -139,7 +139,7 @@ class Employee:
 
 
 class Manager(Employee):
-     def __init__(self, name, role, department, department_managing):
+     def __init__(self, name: str, role: str, department: str, department_managing: str):
           super().__init__(name, role, department)
           self.department_managing = department_managing
 

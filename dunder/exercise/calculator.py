@@ -1,13 +1,13 @@
 
 print('Welcome to the calculator')
-def add(a, b):
+def add(a: int, b: int) -> int:
     return a + b
 
-def subtract(a, b):
+def subtract(a: int, b: int) -> int:
     return a - b
 
 if __name__ == "__main__":
-    print(subtract(90, 70))
+    print(subtract(90, 10))
 
 
 'So, if i run the file directly, the subtract function will be called, but if i run this file externally '

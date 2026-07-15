@@ -38,25 +38,25 @@ This introduces composition, which is even more common than inheritance in real 
 import random
 import uuid
 class Bank:
-    def __init__(self, name):
+    def __init__(self, name: str):
         self.name = name 
         self.customers = []
 
-    def add_customer(self, customer):
+    def add_customer(self, customer: str) -> None:
         self.customers.append(customer)
 
-    def view_customers(self):
+    def view_customers(self) -> list:
         return self.customers
 
 
 class Customer:
-    def __init__(self, name, email, address):
+    def __init__(self, name: str, email: str, address: str):
         self.name = name
         self.email = email
         self.address = address
         self.accounts = []
     
-    def show_detail(self):
+    def show_detail(self) -> str:
         return f"Name: {self.name}\nEmail: {self.email}\nAddress: {self.address}"
     
     def add_accounts(self, account):
@@ -75,28 +75,30 @@ class Account:
         self.transactions = []
 
     @property
-    def balance(self):
+    def balance(self) -> int|float:
         return self._balance
 
-    def deposit(self, amount):
+    def deposit(self, amount: int|float) -> str:
         if amount < 100:
             return f"Amount should be more than 100."
         else:
             self._balance += amount
+            return f"{amount} credited to balance"
 
     
-    def withdraw(self, amount):
+    def withdraw(self, amount: int|float) -> str:
         if amount < 100:
             return f"Amount should be more than 100."
         if self._balance < amount:
             return f"You have insufficient funds for this transaction."
         else:
             self._balance -= amount
+            return f"{amount} debited from balance"
 
     def add_transactions(self, transaction):
         self.transactions.append(transaction)
     
-    def view_transactions(self):
+    def view_transactions(self) -> list:
         return self.transactions
 
 

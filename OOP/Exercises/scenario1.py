@@ -17,19 +17,19 @@ Could you model that using inheritance and polymorphism?
 import random
 
 class Account:
-    def __init__(self, name):
+    def __init__(self, name: str):
         # Generates a valid 10-digit account string
         self.account_number = str(random.randint(1000000000, 9999999999))
         self.name = name
         self.balance = 0.0
 
-    def deposit(self, amount):
+    def deposit(self, amount:int) -> str:
         if amount <= 0:
             return "Deposit must be greater than 0."
         self.balance += amount
         return f"Deposited ${amount:.2f}. New balance: ${self.balance:.2f}"
 
-    def withdraw(self, amount):
+    def withdraw(self, amount: int) -> str:
         """Base withdrawal method to be overridden by child classes."""
         if amount <= 0:
             return "Withdrawal must be greater than 0."
@@ -43,13 +43,13 @@ class Account:
 
 
 class SavingsAccount(Account):
-    def __init__(self, name):
+    def __init__(self, name: str):
         super().__init__(name)
         # Savings rule: cannot go below a minimum balance
         self.min_balance = 500.0
         self.balance = 500.0  # Starting bonus to avoid immediate lock
 
-    def withdraw(self, amount):
+    def withdraw(self, amount: int) -> str:
         """Overrides parent to enforce a minimum balance safety net."""
         if amount <= 0:
             return "Withdrawal must be greater than 0."
@@ -61,12 +61,12 @@ class SavingsAccount(Account):
 
 
 class CurrentAccount(Account):
-    def __init__(self, name):
+    def __init__(self, name: str):
         super().__init__(name)
         # Current rule: allows overdraft up to a certain limit
         self.overdraft_limit = 1000.0
 
-    def withdraw(self, amount):
+    def withdraw(self, amount: int) -> str:
         """Overrides parent to allow spending into a negative balance."""
         if amount <= 0:
             return "Withdrawal must be greater than 0."

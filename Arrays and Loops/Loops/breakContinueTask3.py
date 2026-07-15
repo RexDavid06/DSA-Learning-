@@ -1,4 +1,4 @@
-# Check  for the first even number
+# Check for the first even number
 
 items = [1,  3,  4, 7, 8]
 

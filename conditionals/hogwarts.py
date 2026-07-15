@@ -1,18 +1,18 @@
-# students = ['Hermione', 'Harry', 'Ron']
+students = ['Hermione', 'Harry', 'Ron']
 
-# for i in range(len(students)):
-#     print(i+1, students[i])
+for i in range(len(students)):
+    print(i+1, students[i])
 
 
-hogwart_students = [
-    {"name": "Hermione", "house": "Gryffindor", "patronus": "Otter"},
-    {"name": "Harry", "house": "Gryffindor", "patronus": "Stag"},
-    {"name": "Ron", "house": "Gryffindor", "patronus": "Jack Russell"},
-    {"name": "Draco", "house": "Slytherin", "patronus": None},
-]
+# hogwart_students = [
+#     {"name": "Hermione", "house": "Gryffindor", "patronus": "Otter"},
+#     {"name": "Harry", "house": "Gryffindor", "patronus": "Stag"},
+#     {"name": "Ron", "house": "Gryffindor", "patronus": "Jack Russell"},
+#     {"name": "Draco", "house": "Slytherin", "patronus": None},
+# ]
 
-for student in hogwart_students:
-    print(student["name"], student["house"], student["patronus"], sep=", ")
+# for student in hogwart_students:
+#     print(student["name"], student["house"], student["patronus"], sep=", ")
 
 
 #building a block of hashes
@@ -31,13 +31,13 @@ for student in hogwart_students:
 # main()   
 
 #building a square with a function and a for loop
-def main():
-    print_square(5)
+# def main():
+#     print_square(5)
 
-def print_square(num):
-    for _ in range(num):
-        print("#" * 5)
+# def print_square(num):
+#     for _ in range(num):
+#         print("#" * 5)
 
 
 
-main()
+# main()

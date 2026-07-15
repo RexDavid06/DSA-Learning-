@@ -1,4 +1,4 @@
-#  Loop through a list of days  and print only the working days skipping the weekends
+#  Loop through a list of days and print only the working days skipping the weekends
 
 days = ['Mon', 'Sun', 'Wed', 'Tue']
 weekends = ['Sat', 'Sun']

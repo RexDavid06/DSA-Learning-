@@ -14,7 +14,7 @@ Could you model the relationships between these classes?
 import uuid
 
 class Exercise:
-    def __init__(self, name, muscle_group):
+    def __init__(self, name: str, muscle_group: str):
         self.name = name
         self.muscle_group = muscle_group
 
@@ -24,7 +24,7 @@ class WorkoutPlan:
         self.day = day
         self.exercises = []
     
-    def add_exercises(self, exercise):
+    def add_exercises(self, exercise: str) -> str:
         self.exercises.append(exercise)
         return f"{exercise.name} has been added to your workout list"
 
@@ -33,14 +33,14 @@ class WorkoutPlan:
 
 
 class Member:
-    def __init__(self, username, email, password):
+    def __init__(self, username: str, email: str, password: str):
         self.username = username
         self.email = email
         self.password = password
 
 
 class Client(Member):
-    def __init__(self, username, email, password):
+    def __init__(self, username: str, email: str, password: str):
         client_id = str(uuid.uuid4())
         super().__init__(username, email, password)
         self.client_id = client_id
@@ -49,7 +49,7 @@ class Client(Member):
     def __str__(self):
         return self.workout_plans
 
-    def show_workouts(self):
+    def show_workouts(self) -> str:
         if not self.workout_plans:
             return f"No workout plan today"
         
@@ -60,12 +60,12 @@ class Client(Member):
 
 
 class Trainer(Member):
-    def __init__(self, username, email, password):
+    def __init__(self, username: str, email: str, password: str):
         trainer_id = str(uuid.uuid4())
         super().__init__(username, email, password)
         self.trainer_id = trainer_id
 
-    def assign_workout(self, client, workout_plan):
+    def assign_workout(self, client, workout_plan) -> None:
         client.workout_plans.append(workout_plan)
 
 
