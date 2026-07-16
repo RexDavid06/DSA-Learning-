@@ -5,7 +5,7 @@ class User:
     'the static attribute that all objects share'
     user_count = 0
 
-    def __init__(self, username, email, password):
+    def __init__(self, username:str, email:str, password:str):
         self.username = username
         self.password = password
         self.__email = email
@@ -16,7 +16,7 @@ class User:
         return self.__email
     
     @email.setter
-    def email(self, new_email):
+    def email(self, new_email:str):
         if '@' in new_email:
             self.__email = new_email
     
