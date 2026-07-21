@@ -1,7 +1,7 @@
 # the break statement is used to immediately stop the loop no matter where you are in the loop and moves next to the next line of code
+from typing import List
 
-names = ['john', 'maria', ' ', 'kumar']
-
+names:List[str] = ['john', 'maria', ' ', 'kumar']
 for name in names:
     if name == ' ':
         print('Empty value detected')

@@ -1,8 +1,9 @@
 # List comprehension enables you to create a new list of values using a comprehension or basically a for loop inside a list
+from typing import List
 
 # Traditional Approach
 names = ['Yola', 'Micheal', 'James', 'Yankee', 'Jude', 'Yando']
-y_name = []
+y_name:List[str] = []
 
 for items in names:
     if 'Y' in items:
@@ -27,7 +28,7 @@ for index, item in enumerate(y):
 s = '1 love t0 g0 swimmin9 in 7he morning2'
 
 '''Traditional Approach'''
-nums = []
+nums:List[str] = []
 for item in s:
     if item.isnumeric():
         nums.append(item)
@@ -54,7 +55,7 @@ print(f'Index: {x[0]}')
 # Using If Else in List Comprehension..
 
 words = 'The lord 1s  M1racle G0d'
-alpha = []
+alpha:List[str] = []
 numeric = [item if item.isnumeric() else alpha.append(item) for item in words]
 
 
@@ -64,7 +65,7 @@ print(numeric)
 a = [[1,2], [3,4]]
 
 ''' Traditional Approach'''
-new_list = []
+new_list:List[int] = []
 
 '''iterating over the lists in a and storing it in i '''
 for i in a:

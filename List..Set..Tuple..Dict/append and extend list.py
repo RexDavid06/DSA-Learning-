@@ -13,7 +13,8 @@ print(x)
 x.pop()
 print(x)
 
-#the remove function removes the first instance of an item,   if we  have multiple 3s in a list, the searches and removes the very first instance of the 3
+'''the remove function removes the first instance of an item, if we  have multiple 3s in a list, the searches 
+and removes the very first instance of the 3'''
 x.remove(90)
 print(x)
 
